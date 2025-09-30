@@ -1,0 +1,21 @@
+{
+    "name": "sathish naidu",
+    "dob": "01-01-01",
+    "addresses": [
+        {
+            "type": "current",
+            "doorno": "1-23",
+            "street": "gandhi nagar",
+            "city": "hyd",
+            "pin": 50002
+        },
+        {
+            "type": "perm",
+            "doorno": "1-23",
+            "street": "gandhi nagar",
+            "city": "hyd",
+            "pin": 50002
+        }
+     ],
+     "skills": ["java","devops","cloud"]
+}
