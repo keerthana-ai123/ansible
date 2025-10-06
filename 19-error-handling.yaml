@@ -1,7 +1,7 @@
 - name: user creation
   hosts: local
   connection: local
-  # become: yes
+  become: yes # because we are creating the user administrative task
   tasks:
   - name: check user exist or not
     ansible.builtin.command: id roboshop
@@ -12,6 +12,6 @@
     ansible.builtin.debug:
       msg: "{{ user_output }}"
 
-  # - name: create user
-  #   ansible.builtin.command: useradd roboshop
-  #   when: user_output.rc != 0
+  - name: create user
+    ansible.builtin.command: useradd roboshop
+    when: user_output.rc != 0
