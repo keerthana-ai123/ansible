@@ -5,7 +5,7 @@
     technologies: DevOps, Linux, Shell, Ansible # string
     name: "Sivakumar reddy M"
     gmail: Info@GMAIL.COM
-  #   ipaddress: "19222.168.0.1"
+    ipaddress: "19222.168.0.1"
      # dictionary == map
     tags:
        Application: payment
@@ -55,9 +55,8 @@
     ansible.builtin.debug:
       msg: "{{ gmail | lower }}"
 
-  # - name: check IP is valid or not
-  #   ansible.builtin.debug: 
-  #     msg: "{{ ipaddress | ansible.utils.ipv4 }}"
+  - name: check IP is valid or not
+    ansible.builtin.debug: "{{ ipaddress | ansible.utils.ipv4 }}"
 
   # - name: grep for root
   #   #ansible.builtin.command: cat /etc/passwd | grep root
