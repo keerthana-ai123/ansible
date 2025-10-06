@@ -1,8 +1,8 @@
 - name: functions
   hosts: local
   connection: local
-  # vars:
-  #   technologies: DevOps, Linux, Shell, Ansible # string
+  vars:
+    technologies: DevOps, Linux, Shell, Ansible # string
   #   name: "Sivakumar reddy M"
   #   gmail: Info@GMAIL.COM
   #   ipaddress: "19222.168.0.1"
@@ -22,9 +22,9 @@
       msg: "Hello, {{ name | default('Ramesh') }}"
     
   # string to list
-  # - name: convert string to list
-  #   ansible.builtin.debug:
-  #     msg: "Technologies are: {{ technologies | split(',') }}"
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: "Technologies are: {{ technologies | split(',') }}"
 
   # - name: convert map to list
   #   ansible.builtin.debug:
